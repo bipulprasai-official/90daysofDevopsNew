@@ -1,30 +1,10 @@
-# Question: Given a list my_list = [1, 2, 3, 4, 5], 
-# write the code to create a new list containing elements from index 1 to 3 (inclusive).
+from flask import Flask
 
-# Below is for Slicing in Python
-my_list = [1, 2, 3, 4, 5]
-newList = my_list[0:4]
-newListNegative = my_list[:-2] #opposite way of slicing or from back
-# print(newListNegative)
+app = Flask(__name__)
 
-# below is for append in python
-my_list.append(6)
-# print(my_list)
+@app.route('/')
+def hello():
+    return 'Hello, DevOps World!'
 
-# inserting in python
-my_list.insert(6,2.6)
-# print(my_list)
-
-# removing in python
-my_list.remove(3)
-# print(my_list)
-
-# removing in python
-my_list.pop(5)
-# print(my_list)
-
-# length in python
-
-lengthofstring = len(my_list)
-print(my_list)
-print(lengthofstring)
+if __name__ == '__main__':
+    app.run(debug=True, host='127.0.0.1', port='5001')
